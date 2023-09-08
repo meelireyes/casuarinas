@@ -1,5 +1,7 @@
 //Sistema de reservas de Casuarinas
 Algoritmo casuarinas
+	definir op, cantidadPax,asado,vegetariano, opCabana Como Entero
+	definir opAlojamiento Como Caracter
 	
 	// menú principal
 	Escribir "Bienvenido a Casuarinas"
@@ -60,7 +62,23 @@ Algoritmo casuarinas
 	Si op=2 Entonces
 		Escribir "Elegiste el alojamiento en nuestras cabañas"
 		Escribir " "
-		Escribir "Disponemos de 3 cabañas con capacidad para hasta 6 personas"
+		Escribir "Disponemos de 3 cabañas con capacidad para hasta 6 personas."
+		Escribir "Seleccione la cabaña deseada:"
+		Repetir
+			Escribir "  "
+			Escribir " 1. Ombú"
+			Escribir " 2. Tilo"
+			Escribir " 3. Algarrobo"
+			Escribir "  "
+			Escribir "Ingrese opción (1-3)"
+			Escribir "  "
+			leer opCabana
+			si opCabana MOD 2 <> 0
+				Escribir "Cabaña ya reservada, por favor, elegir otra."
+			Sino 
+				Escribir " Cabaña disponible, comencemos con la reserva." 
+			FinSi
+		Hasta Que opCabana MOD 2=0
 		Escribir " "
 		Escribir "Ingresá tu nombre y apellido para iniciar la reserva"
 		Leer nombrePax
@@ -70,10 +88,12 @@ Algoritmo casuarinas
 		Escribir " "
 		Escribir "Excelente"
 		Escribir "  "
-		Escribir "Elija opción a o b"
+		Escribir "Elija el tipo de reserva deseado: "
 		Escribir " "
 		Escribir "   a. Solo alojamiento"
 		Escribir "   b. Incluir Día de Campo"
+		Escribir " "
+		Escribir "Ingrese opción a o b "
 		Leer opAlojamiento
 		si opAlojamiento = "a" Entonces
 			Escribir " "
@@ -89,7 +109,7 @@ Algoritmo casuarinas
 			Escribir " "
 			Escribir "Elegiste agregar a tu estadía el Día de Campo"
 			Escribir " "
-			Escribir "Es una jornada de 11 a 17 hs sin alojamiento. Un plan ideal para que puedas conectarte con la naturaleza, respirar aire puro y conocer la tradición del campo argentino."
+			Escribir "Es una jornada de 11 a 17 hs. Un plan ideal para que puedas conectarte con la naturaleza, respirar aire puro y conocer la tradición del campo argentino."
 			Escribir " "
 			Escribir "Vamos a elegir el menú para cada asistente"
 			Escribir "Las dos opciones incluyen entrada, plato principal, postre y una bebida sin alcohol"
